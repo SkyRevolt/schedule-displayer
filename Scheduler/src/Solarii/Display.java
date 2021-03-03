@@ -4,8 +4,16 @@ import javax.swing.JOptionPane;
 
 public class Display extends javax.swing.JFrame{
 	
-	public Display() {
+	/**
+     *
+     */
+    private static final long serialVersionUID = -4720667810160888930L;
+
+    public Display() {
 		initComponents();
+
+        setLocationRelativeTo(null);
+        setResizable(false);
 	}
 	
 	private void initComponents() {
@@ -43,7 +51,9 @@ public class Display extends javax.swing.JFrame{
             }
         });
 
-        vweek.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        vweek.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {
+                 "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" 
+            }));
         vweek.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 vweekActionPerformed(evt);
@@ -73,7 +83,7 @@ public class Display extends javax.swing.JFrame{
                                     .addComponent(omegafield, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 89, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -104,23 +114,20 @@ public class Display extends javax.swing.JFrame{
     }// </editor-fold>                        
 
     private void alphafieldActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        String first;
-        first = alphafield.getText();
+        // nothing to see here
     }                                          
 
     private void omegafieldActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        String last;
-        last = omegafield.getText();
+        // nothing to see here
     }                                          
 
     private void confirmActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        // TODO add your handling code here:
-        String week;
-        week = vweek.getSelectedItem().toString();
+        String day = vweek.getSelectedItem().toString();
         
-        
-        	
-        }                          
+        String name = alphafield.getText() + " " + omegafield.getText();
+
+        JOptionPane.showMessageDialog(null, "Your name is: " + name, "Tasks For: " + day, JOptionPane.INFORMATION_MESSAGE);
+    }                          
 
     private void vweekActionPerformed(java.awt.event.ActionEvent evt) {                                      
         // TODO add your handling code here:
