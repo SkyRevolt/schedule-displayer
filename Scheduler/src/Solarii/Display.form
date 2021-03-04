@@ -141,14 +141,15 @@
     <Component class="javax.swing.JComboBox" name="vweek">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="7">
-            <StringItem index="0" value="Sunday"/>
-            <StringItem index="1" value="Monday"/>
-            <StringItem index="2" value="Tuesday"/>
-            <StringItem index="3" value="Wednesday"/>
-            <StringItem index="4" value="Thursday"/>
-            <StringItem index="5" value="Friday"/>
-            <StringItem index="6" value="Saturday"/>
+          <StringArray count="8">
+            <StringItem index="0" value="Select Day"/>
+            <StringItem index="1" value="Sunday"/>
+            <StringItem index="2" value="Monday"/>
+            <StringItem index="3" value="Tuesday"/>
+            <StringItem index="4" value="Wednesday"/>
+            <StringItem index="5" value="Thursday"/>
+            <StringItem index="6" value="Friday"/>
+            <StringItem index="7" value="Saturday"/>
           </StringArray>
         </Property>
       </Properties>
