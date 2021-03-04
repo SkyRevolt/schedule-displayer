@@ -136,7 +136,7 @@ public class Display extends javax.swing.JFrame{
             String name = alphafield.getText() + " " + omegafield.getText();
 
             JOptionPane.showMessageDialog(null, "Welcome " + name +"- Crewmate" + "\n TT Booting Task Database " +
-            "\n | | Short Task=" +this.qset +"\n | | Long Task=" +this.pset + "\n | | Visual Task=" +this.vset + "\n | | Common Task=" +this.cset 
+            "\n | | Short Task=" +qset +"\n | | Long Task=" +pset + "\n | | Visual Task=" +vset + "\n | | Common Task=" +cset 
             + "\n V Have a safe day at work.", "Tasks For: " + day, JOptionPane.INFORMATION_MESSAGE);
         }
         
