@@ -136,7 +136,7 @@ public class Display extends javax.swing.JFrame{
             String name = alphafield.getText() + " " + omegafield.getText();
 
             JOptionPane.showMessageDialog(null, "Welcome " + name +"- Crewmate" + "\n TT Booting Task Database " +
-            "\n | | Short Task=" +this.qset +"\n | | Long Task=" +this.pset + "\n | | Visual Task=" +this.vset + "\n | | Common Task=" +this.cset 
+            "\n | | Short Task=" +qset +"\n | | Long Task=" +pset + "\n | | Visual Task=" +vset + "\n | | Common Task=" +cset 
             + "\n V Have a safe day at work.", "Tasks For: " + day, JOptionPane.INFORMATION_MESSAGE);
         }
         
@@ -167,16 +167,16 @@ public class Display extends javax.swing.JFrame{
     // End of variables declaration          
 	
     //haha
-    public int qran;
-    public int pran;
-    public int vran;
-    public int cran;
+    public static int qran;
+    public static int pran;
+    public static int vran;
+    public static int cran;
     
     //ae
-    public String qset;
-    public String pset;
-    public String vset;
-    public String cset;
+    public static String qset;
+    public static String pset;
+    public static String vset;
+    public static String cset;
 
     
 }

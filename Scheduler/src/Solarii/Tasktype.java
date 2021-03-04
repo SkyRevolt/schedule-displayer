@@ -1,7 +1,7 @@
 package Solarii;
 
 import java.util.Random;
-import Display;
+import Solarii.Display;
 
 public class Tasktype {
 
@@ -18,9 +18,11 @@ public class Tasktype {
     Display.pran = rng.nextInt(maxprolonged);
     Display.vran = rng.nextInt(maxvisual);
     Display.cran = rng.nextInt(maxcommon);
-        }
+    }
 
-
-
+    public static int qran;
+    public static int pran;
+    public static int vran;
+    public static int cran;
 }
 

@@ -1,7 +1,7 @@
 package Solarii;
 
-import Display;
-import Tasktype;
+import Solarii.Display;
+import Solarii.Tasktype;
 
 public class Task {
 
