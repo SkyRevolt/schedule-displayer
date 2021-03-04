@@ -1,5 +1,4 @@
 # schedule-displayer
-short school activity. pain
 
 
 
