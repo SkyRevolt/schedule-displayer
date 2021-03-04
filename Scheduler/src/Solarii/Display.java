@@ -113,24 +113,7 @@ public class Display extends javax.swing.JFrame{
 
         pack();
     }// </editor-fold>    
-
-    public class Tasktype {
-        Random rng = new Random();
-        int maxquick = 5;
-        int maxprolonged = 3;
-        int maxvisual = 4;
-        int maxcommon = 5;
-
-    }
-
-    public class Task {
-        String[] quick = {"Fix Weather Node", "Process Data", "Run Diagnostics", "Store Artifacts", "Upload Data"};
-        String[] prolonged = {"Align Engine Output", "Fuel Engines", "Reboot Wifi"};
-        String[] visual = {"Clear Asteroids", "Empty Garbage", "Prime Shields", "Submit Scan"};
-        String[] common = {"Enter Id Code", "Fix Wiring","Insert Keys", "Scan Boarding Pass", "Swipe Card"};
-
-    }
-            
+  
 
     public class Selection {
         // nothing to see here.... for now
@@ -153,7 +136,7 @@ public class Display extends javax.swing.JFrame{
             String name = alphafield.getText() + " " + omegafield.getText();
 
             JOptionPane.showMessageDialog(null, "Welcome " + name +"- Crewmate" + "\n TT Booting Task Database " +
-            "\n || Short Task=" +this.cset +"\n || Long Task=" +this.pset + "\n || Visual Task=" +this.vset + "\n || Common Task=" +this.cset 
+            "\n | | Short Task=" +this.qset +"\n | | Long Task=" +this.pset + "\n | | Visual Task=" +this.vset + "\n | | Common Task=" +this.cset 
             + "\n V Have a safe day at work.", "Tasks For: " + day, JOptionPane.INFORMATION_MESSAGE);
         }
         
@@ -184,16 +167,16 @@ public class Display extends javax.swing.JFrame{
     // End of variables declaration          
 	
     //haha
-    private int qran;
-    private int pran;
-    private int vran;
-    private int cran;
+    public static int qran;
+    public static int pran;
+    public static int vran;
+    public static int cran;
     
     //ae
-    private String qset;
-    private String pset;
-    private String vset;
-    private String cset;
+    public static String qset;
+    public static String pset;
+    public static String vset;
+    public static String cset;
 
     
 }
