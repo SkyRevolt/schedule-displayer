@@ -135,9 +135,9 @@ public class Display extends javax.swing.JFrame{
         } else {
             String name = alphafield.getText() + " " + omegafield.getText();
 
-            JOptionPane.showMessageDialog(null, "Welcome " + name +"- Crewmate" + "\n TT Booting Task Database " +
-            "\n | | Short Task=" +qset +"\n | | Long Task=" +pset + "\n | | Visual Task=" +vset + "\n | | Common Task=" +cset 
-            + "\n V Have a safe day at work.", "Tasks For: " + day, JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Welcome " + name +"- Crewmate" + "\n T T Booting Task Database " +
+            "\n | | Short Task= " +qset +"\n | | Long Task= " +pset + "\n | | Visual Task= " +vset + "\n | | Common Task= " +cset 
+            + "\n I I Have a safe day at work.", "Tasks For: " + day, JOptionPane.INFORMATION_MESSAGE);
         }
         
     }                          
@@ -149,6 +149,28 @@ public class Display extends javax.swing.JFrame{
     
 
 	public static void main(String[] args){
+        int maxquick = 5;
+		    int maxprolonged = 3;
+		    int maxvisual = 4;
+		    int maxcommon = 5;
+
+		    Random rng = new Random();
+
+		    smile.qran = rng.nextInt(maxquick);
+		    smile.pran = rng.nextInt(maxprolonged);
+		    smile.vran = rng.nextInt(maxvisual);
+		    smile.cran = rng.nextInt(maxcommon);
+		    
+		    String[] quick = {"Fix Weather Node", "Process Data", "Run Diagnostics", "Store Artifacts", "Upload Data"};
+	        String[] prolonged = {"Align Engine Output", "Fuel Engines", "Reboot Wifi"};
+	        String[] visual = {"Clear Asteroids", "Empty Garbage", "Prime Shields", "Submit Scan"};
+	        String[] common = {"Enter Id Code", "Fix Wiring","Insert Keys", "Scan Boarding Pass", "Swipe Card"};
+
+	        qset = quick[qran];
+	        pset = prolonged[pran];
+	        vset = visual[vran];
+	        cset = common[cran];
+
 		java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Display().setVisible(true);
