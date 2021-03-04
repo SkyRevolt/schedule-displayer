@@ -156,10 +156,10 @@ public class Display extends javax.swing.JFrame{
 
 		    Random rng = new Random();
 
-		    smile.qran = rng.nextInt(maxquick);
-		    smile.pran = rng.nextInt(maxprolonged);
-		    smile.vran = rng.nextInt(maxvisual);
-		    smile.cran = rng.nextInt(maxcommon);
+		    qran = rng.nextInt(maxquick);
+		    pran = rng.nextInt(maxprolonged);
+		    vran = rng.nextInt(maxvisual);
+		    cran = rng.nextInt(maxcommon);
 		    
 		    String[] quick = {"Fix Weather Node", "Process Data", "Run Diagnostics", "Store Artifacts", "Upload Data"};
 	        String[] prolonged = {"Align Engine Output", "Fuel Engines", "Reboot Wifi"};
