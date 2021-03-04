@@ -1,6 +1,7 @@
 package Solarii;
 
 import javax.swing.JOptionPane;
+import java.util.Random;
 
 public class Display extends javax.swing.JFrame{
 	
@@ -52,7 +53,7 @@ public class Display extends javax.swing.JFrame{
         });
 
         vweek.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {
-                 "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" 
+                 "Select Day", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" 
             }));
         vweek.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +112,29 @@ public class Display extends javax.swing.JFrame{
         );
 
         pack();
-    }// </editor-fold>                        
+    }// </editor-fold>    
+
+    public class Tasktype {
+        Random rng = new Random();
+        int maxquick = 5;
+        int maxprolonged = 3;
+        int maxvisual = 4;
+        int maxcommon = 5;
+
+    }
+
+    public class Task {
+        String[] quick = {"Fix Weather Node", "Process Data", "Run Diagnostics", "Store Artifacts", "Upload Data"};
+        String[] prolonged = {"Align Engine Output", "Fuel Engines", "Reboot Wifi"};
+        String[] visual = {"Clear Asteroids", "Empty Garbage", "Prime Shields", "Submit Scan"};
+        String[] common = {"Enter Id Code", "Fix Wiring","Insert Keys", "Scan Boarding Pass", "Swipe Card"};
+
+    }
+            
+
+    public class Selection {
+        // nothing to see here.... for now
+    }
 
     private void alphafieldActionPerformed(java.awt.event.ActionEvent evt) {                                           
         // nothing to see here
@@ -124,16 +147,23 @@ public class Display extends javax.swing.JFrame{
     private void confirmActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String day = vweek.getSelectedItem().toString();
         
-        String name = alphafield.getText() + " " + omegafield.getText();
+        if(day == "Select Day") {
+            JOptionPane.showMessageDialog(null, "Select Valid Day", "Error!", JOptionPane.ERROR_MESSAGE);            
+        } else {
+            String name = alphafield.getText() + " " + omegafield.getText();
 
-        JOptionPane.showMessageDialog(null, "Your name is: " + name, "Tasks For: " + day, JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Welcome " + name +"- Crewmate" + "\n TT Booting Task Database " +
+            "\n || Short Task=" +this.cset +"\n || Long Task=" +this.pset + "\n || Visual Task=" +this.vset + "\n || Common Task=" +this.cset 
+            + "\n V Have a safe day at work.", "Tasks For: " + day, JOptionPane.INFORMATION_MESSAGE);
+        }
+        
     }                          
 
     private void vweekActionPerformed(java.awt.event.ActionEvent evt) {                                      
-        // TODO add your handling code here:
+        
     }                                     
 	
-  
+    
 
 	public static void main(String[] args){
 		java.awt.EventQueue.invokeLater(new Runnable() {
@@ -153,4 +183,17 @@ public class Display extends javax.swing.JFrame{
     private javax.swing.JComboBox<String> vweek;
     // End of variables declaration          
 	
+    //haha
+    private int qran;
+    private int pran;
+    private int vran;
+    private int cran;
+    
+    //ae
+    private String qset;
+    private String pset;
+    private String vset;
+    private String cset;
+
+    
 }
