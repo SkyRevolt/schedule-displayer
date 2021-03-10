@@ -130,6 +130,27 @@ public class Display extends javax.swing.JFrame{
     private void confirmActionPerformed(java.awt.event.ActionEvent evt) {                                        
         String day = vweek.getSelectedItem().toString();
         
+        int maxquick = 5;
+	    int maxprolonged = 3;
+	    int maxvisual = 4;
+	    int maxcommon = 5;
+	    
+        Random rng = new Random();
+	    qran = rng.nextInt(maxquick);
+	    pran = rng.nextInt(maxprolonged);
+	    vran = rng.nextInt(maxvisual);
+	    cran = rng.nextInt(maxcommon);
+        
+	    String[] quick = {"Fix Weather Node", "Process Data", "Run Diagnostics", "Store Artifacts", "Upload Data"};
+	    String[] prolonged = {"Align Engine Output", "Fuel Engines", "Reboot Wifi"};
+	    String[] visual = {"Clear Asteroids", "Empty Garbage", "Prime Shields", "Submit Scan"};
+	    String[] common = {"Enter Id Code", "Fix Wiring","Insert Keys", "Scan Boarding Pass", "Swipe Card"};
+        
+	    qset = quick[qran];
+	    pset = prolonged[pran];
+	    vset = visual[vran];
+	    cset = common[cran];
+
         if(day == "Select Day") {
             JOptionPane.showMessageDialog(null, "Select Valid Day", "Error!", JOptionPane.ERROR_MESSAGE);            
         } else {
@@ -149,27 +170,6 @@ public class Display extends javax.swing.JFrame{
     
 
 	public static void main(String[] args){
-        int maxquick = 5;
-		    int maxprolonged = 3;
-		    int maxvisual = 4;
-		    int maxcommon = 5;
-
-		    Random rng = new Random();
-
-		    qran = rng.nextInt(maxquick);
-		    pran = rng.nextInt(maxprolonged);
-		    vran = rng.nextInt(maxvisual);
-		    cran = rng.nextInt(maxcommon);
-		    
-		    String[] quick = {"Fix Weather Node", "Process Data", "Run Diagnostics", "Store Artifacts", "Upload Data"};
-	        String[] prolonged = {"Align Engine Output", "Fuel Engines", "Reboot Wifi"};
-	        String[] visual = {"Clear Asteroids", "Empty Garbage", "Prime Shields", "Submit Scan"};
-	        String[] common = {"Enter Id Code", "Fix Wiring","Insert Keys", "Scan Boarding Pass", "Swipe Card"};
-
-	        qset = quick[qran];
-	        pset = prolonged[pran];
-	        vset = visual[vran];
-	        cset = common[cran];
 
 		java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
